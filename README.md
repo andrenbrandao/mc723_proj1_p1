@@ -14,32 +14,32 @@ Como o Gnuplot é capaz de plotar gráficos e gerar imagens no formato PNG, esta
 
 wget http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.0.3/gnuplot-5.0.3.tar.gz  
 
-sudo apt-get install linux-tools-common linux-tools-generic
+sudo apt-get install linux-tools-common linux-tools-generic  
 
 
 ## Como compilar/instalar
 
-Gnuplot:
+Gnuplot:  
 
 descompacte e entre na pasta. 
-digite:
+digite:  
 
-./configure --prefix=$HOME/usr --with-readline=gnu
-make
-make install-strip
+./configure --prefix=$HOME/usr --with-readline=gnu  
+make  
+make install-strip  
 
-Isto vai instalar gnuplot  em ~/usr/bin
+Isto vai instalar gnuplot  em ~/usr/bin.  
 
 
 ## Como executar
 
-Executar o script da pasta examples: ./execute.sh
-Se necessário mudar o tipo de arquivo: sudo chmod 777 execute.sh
+Executar o script da pasta examples: ./execute.sh  
+Se necessário mudar o tipo de arquivo: sudo chmod 777 execute.sh  
 
 
 ## Como medir o desempenho
 
-O script já executará 10 vezes cada instância. A sua saída conterá a média e desvio padrão de cada instância. Temos as seguintes informações:
+O script já executará 10 vezes cada instância. A sua saída conterá a média e desvio padrão de cada instância. Temos as seguintes informações:  
 
 cycles: quantidade de ciclos executados  
 bus-cycles: tempo requerido para ler ou escrever entre cpu e memória externa  
@@ -53,8 +53,7 @@ time elapsed: tempo de execução do programa
 
 ## Como apresentar o desempenho
 
-O desempenho será mostrado com as médias das 10 amostragens e a margem de erro será o desvio padrão já retornado pelo perf. O desvio padrão será retornado como uma porcentagem então deve-se mutliplicá-lo pela média para se obter o valor real.
-
+O desempenho será mostrado com as médias das 10 amostragens e a margem de erro será o desvio padrão já retornado pelo perf. O desvio padrão será retornado como uma porcentagem então deve-se mutliplicá-lo pela média para se obter o valor real.  
 
 ## Medições base (uma máquina)
 
