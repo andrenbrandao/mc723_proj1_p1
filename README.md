@@ -41,14 +41,14 @@ Se necessário mudar o tipo de arquivo: sudo chmod 777 execute.sh
 
 O script já executará 10 vezes cada instância. A sua saída conterá a média e desvio padrão de cada instância. Temos as seguintes informações:
 
-cycles: quantidade de ciclos executados
-bus-cycles: tempo requerido para ler ou escrever entre cpu e memória externa
-cpu-clock: quantidade de clocks da cpu
-page-faults: Falha na busca de páginas
-L1-dcache-store-misses: falha na escrita da cache L1 de dados
-L1-dcache-load-misses: falha na leitura da cache L1 de dados
-mem-stores: falha na escrita da memória principal
-time elapsed: tempo de execução do programa
+cycles: quantidade de ciclos executados^M
+bus-cycles: tempo requerido para ler ou escrever entre cpu e memória externa^M
+cpu-clock: quantidade de clocks da cpu^M
+page-faults: Falha na busca de páginas^M
+L1-dcache-store-misses: falha na escrita da cache L1 de dados^M
+L1-dcache-load-misses: falha na leitura da cache L1 de dados^M
+mem-stores: falha na escrita da memória principal^M
+time elapsed: tempo de execução do programa^M
 
 
 ## Como apresentar o desempenho
