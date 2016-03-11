@@ -8,7 +8,5 @@ sudo apt-get install linux-tools-3.19.0-25-generic
 
 Depois de devidamente instalado utilizar da seguinte maneira:
 
-sh ./execute.sh
-
-perf stat -r 10 -e cycles,bus-cycles,cpu-clock,page-faults,L1-dcache-store-misses,mem-stores /usr/bin/gnuplot foo3.plg
+./execute.sh
 

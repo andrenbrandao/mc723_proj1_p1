@@ -11,14 +11,51 @@ Medir desempenho de aplicações é importante pois permite obter valores tangí
 Como o Gnuplot é capaz de plotar gráficos e gerar imagens no formato PNG, estaremos medindo o tempo de execução no processamento do gráfico, assim como o uso de memória e o acesso ao disco.
 
 ## O que baixar
-Onde pode ser baixado o código fonte dele. Não é permitido utilizar nenhum versão já instalada nos computadores.
+
+wget http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.0.3/gnuplot-5.0.3.tar.gz^M
+
+sudo apt-get install linux-tools-common linux-tools-generic
+
+
 ## Como compilar/instalar
-O programa deverá ser instalado no computador, compilado localmente. Não deixar o binário disponível. Não deve ser necessário instalar como administrador do computador (root)
+
+Gnuplot:
+
+descompacte e entre na pasta. 
+digite:
+
+./configure --prefix=$HOME/usr --with-readline=gnu
+make
+make install-strip
+
+Isto vai instalar gnuplot  em ~/usr/bin
+
+
 ## Como executar
-Instruções para execução. Se seu programa precisa de entradas, você deve fornece-las para que todos executem corretamente.
+
+Executar o script da pasta examples: ./execute.sh
+Se necessário mudar o tipo de arquivo: sudo chmod 777 execute.sh
+
+
 ## Como medir o desempenho
-Como que o desempenho é medido através deste programa? Se for através de tempo, você deve especificar claramente qual tempo deverá ser utilizado e indicar o motivo aqui. Quantas vezes a medida deverá ser feita? O que fazer com ela (média, etc) ? Não especificar o tempo será considerado falha grave.
+
+O script já executará 10 vezes cada instância. A sua saída conterá a média e desvio padrão de cada instância. Temos as seguintes informações:
+
+cycles: quantidade de ciclos executados
+bus-cycles: tempo requerido para ler ou escrever entre cpu e memória externa
+cpu-clock: quantidade de clocks da cpu
+page-faults: Falha na busca de páginas
+L1-dcache-store-misses: falha na escrita da cache L1 de dados
+L1-dcache-load-misses: falha na leitura da cache L1 de dados
+mem-stores: falha na escrita da memória principal
+time elapsed: tempo de execução do programa
+
+
 ## Como apresentar o desempenho
-Como o desempenho deverá ser mostrado. Margem de erro, etc. 
+
+O desempenho será mostrado com as médias das 10 amostragens e a margem de erro será o desvio padrão já retornado pelo perf. O desvio padrão será retornado como uma porcentagem então deve-se mutliplicá-lo pela média para se obter o valor real.
+
+
 ## Medições base (uma máquina)
+
 Inclua a especificação dos componentes relevantes e os resultados de desempenho.
