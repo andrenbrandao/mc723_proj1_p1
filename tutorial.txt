@@ -1,0 +1,12 @@
+wget http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.0.3/gnuplot-5.0.3.tar.gz
+
+descompacte e entre na pasta. 
+digite:
+
+./configure --prefix=$HOME/usr --with-readline=gnu
+make
+make install-strip
+
+Isto vai instalargnuplot  em ~/usr/bin
+
+
