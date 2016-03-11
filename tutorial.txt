@@ -7,6 +7,11 @@ digite:
 make
 make install-strip
 
-Isto vai instalargnuplot  em ~/usr/bin
+Isto vai instalar gnuplot  em ~/usr/bin
 
+Para rodar o gnuplot, copie os arquivos da pasta examples do repositorio de MC733 para ~/usr/bin
 
+entre em ~/usr/bin e execute:
+
+./gnuplot foo3.plg
+xdg-open simple3.png
