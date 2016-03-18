@@ -57,4 +57,9 @@ O desempenho será mostrado com as médias das 10 amostragens e a margem de erro
 
 ## Medições base (uma máquina)
 
-Inclua a especificação dos componentes relevantes e os resultados de desempenho.
+Configuraçoes da maquina: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz 3072 KB Cache, 4GB RAM.  
+
+Time elapsed (s) 2,366946723 ( +-  2,42% )  
+cpu-clock (msec) 2365,136127 ( +-  2,44% )  
+mem-stores 1.975.542.493 ( +-  0,06% )  
+bus-cycles 235.183.921 ( +-  2,44% )  
