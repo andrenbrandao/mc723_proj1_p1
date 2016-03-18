@@ -2,14 +2,14 @@
 
 ## O que faz? Para que serve?
 
-Gnuplot é uma aplicação de recursos gráficos orientados por linha de comando portátil para Linux, MS Windows, OSX e várias outras plataformas. Originalmente foi criada para auxiliar estudantes e cientistas na visualização matemática de funções e dados de forma interativa. Também é utilizado como um motor de plotagem por aplicações de terceiros tais como Octave. O Gnuplot é uma ferramenta bastante versátil capaz de plotar gráficoss 2D simples, gráficos em 3D e superfícies, funções matemáticas e ajustes, transformações de eixo, animações, etc...
+Gnuplot é uma aplicação de recursos gráficos orientados por linha de comando portátil para Linux, MS Windows, OSX e várias outras plataformas. Originalmente foi criada para auxiliar estudantes e cientistas na visualização matemática de funções e dados de forma interativa. Também é utilizado como um motor de plotagem por aplicações de terceiros tais como Octave. 
+O Gnuplot é uma ferramenta bastante versátil capaz de plotar gráficoss 2D simples, gráficos em 3D e superfícies, funções matemáticas e ajustes, transformações de eixo, animações, etc...
 
 ## Por que é bom medir desempenho?
 
 Medir desempenho de aplicações é importante pois permite obter valores tangíveis sobre a execução da aplicação, que são úteis para um melhor entendimento do seu comportamento dentro da máquina. Ter acesso a informações como acesso ao disco, hit/miss de caches, uso de memória em certos trechos de código e assim por diante, permite tomar decisões de desenvolvimento futuas ou até mesmo decisões de otimizações para uma determinada máquina.
 
-Como o Gnuplot é capaz de plotar gráficos, gerando imagens no formato PNG, estaremos medindo o tempo de execução do processamento do gráfico, assim como o uso de memória e o acesso ao disco.
-
+Como o Gnuplot é capaz de plotar gráficos e gerar imagens no formato PNG, estaremos medindo o tempo de execução no processamento do gráfico, assim como o uso de memória e o acesso ao disco.
 
 ## O que baixar
 
@@ -25,7 +25,6 @@ Para baixar a ferramenta perf é necessário o seguinte comando:
 
 OBS: É necessário instalar a versão do perf correspondente à sua versão do kernel.
 
-
 ## Como compilar/instalar
 
 Para compilar o Gnuplot:
@@ -34,6 +33,7 @@ Descompacte o arquivo que você acabou de baixar (*gnuplot-5.0.3.tar.gz*) atrav�
 
 >tar -vzxf gnuplot-5.0.3.tar.gz
 
+Isto vai instalar gnuplot  em ~/usr/bin.  
 Entre no diretório e digite:
 
 >./configure --prefix=$HOME/usr --with-readline=gnu  
@@ -46,7 +46,7 @@ Isso fará com o que o Gnuplot seja instalado em ~/usr/bin.
 
 Para excutar o Gnuplot, preparamos um script que está na pasta examples. 
 
-Simplesmente basta executar esse script que ele fará todas as medições necessárias para a coleta de dados.
+Simplesmente basta executar esse script que ele fará todas as medições necessárias para a coleta de dados. Os dados coletados e que devem ser inseridos na tabela são referentes ao do arquivo *foo3.plg*.
 
 > ./execute.sh
 
@@ -74,4 +74,9 @@ O desempenho de cada uma dessas informações será apresentado como a média da
 
 ## Medições base (uma máquina)
 
-Inclua a especificação dos componentes relevantes e os resultados de desempenho.
+Configuraçoes da maquina: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz 3072 KB Cache, 4GB RAM.  
+
+Time elapsed (s) 2,366946723 ( +-  2,42% )  
+cpu-clock (msec) 2365,136127 ( +-  2,44% )  
+mem-stores 1.975.542.493 ( +-  0,06% )  
+bus-cycles 235.183.921 ( +-  2,44% )  
