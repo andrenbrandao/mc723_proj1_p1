@@ -36,6 +36,7 @@ Isto vai instalar gnuplot  em ~/usr/bin.
 Executar o script da pasta examples: ./execute.sh  
 Se necessário mudar o tipo de arquivo: sudo chmod 777 execute.sh  
 
+Obs.: caso algum erro ocorra, leia o arquivo tutorial.txt e tutorial_perf.txt para mais informações.
 
 ## Como medir o desempenho
 
